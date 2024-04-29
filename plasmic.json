@@ -1,0 +1,116 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "tvwynAfQ8HvxBn14Wy9CDp",
+      "projectApiToken": "6A2ALPSawHNOdaV0OYxGWAKMMbX3wnVuhGUFG2IOi0ttHr61vfuqa1INvaDj9hYCcCQDhOuyLQ1C4RIpTXDQ",
+      "projectName": "Blank website",
+      "version": "latest",
+      "cssFilePath": "plasmic/blank_website/plasmic.module.css",
+      "components": [
+        {
+          "id": "fToXGLxWr8Wk",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "tvwynAfQ8HvxBn14Wy9CDp",
+          "renderModuleFilePath": "plasmic/blank_website/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/blank_website/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/"
+        }
+      ],
+      "icons": [
+        {
+          "id": "MLdecHJ30CPP",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/blank_website/icons/PlasmicIcon__Icon.tsx"
+        }
+      ],
+      "images": [
+        {
+          "id": "EbWUS1UqfGaK",
+          "name": "Devyn Green Hero Image",
+          "filePath": "../public/plasmic/blank_website/images/devynGreenHeroImage.png"
+        },
+        {
+          "id": "m2-CJBJEoWO_",
+          "name": "image 2",
+          "filePath": "../public/plasmic/blank_website/images/image2.svg"
+        },
+        {
+          "id": "SNVAoERPRCP4",
+          "name": "image 3",
+          "filePath": "../public/plasmic/blank_website/images/image3.png"
+        },
+        {
+          "id": "pune4j_LAsR8",
+          "name": "image 4",
+          "filePath": "../public/plasmic/blank_website/images/image4.png"
+        },
+        {
+          "id": "6k2pBEZym2P4",
+          "name": "Devyn Green - Social Share.png",
+          "filePath": "../public/plasmic/blank_website/images/devynGreenSocialSharepng.png"
+        }
+      ],
+      "indirect": false,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "codeComponents": [
+        {
+          "id": "j7okvIZCEIAR",
+          "name": "PlasmicHead",
+          "displayName": "hostless-plasmic-head",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "6rPkVxrgFkQB",
+          "name": "Fetcher",
+          "displayName": "plasmic-data-source-fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ],
+      "customFunctions": []
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "uarjUj0rGmN_",
+        "name": "Screen",
+        "projectId": "tvwynAfQ8HvxBn14Wy9CDp",
+        "contextFilePath": "plasmic/blank_website/PlasmicGlobalVariant__Screen.tsx"
+      }
+    ]
+  },
+  "wrapPagesWithGlobalContexts": true,
+  "nextjsConfig": {
+    "pagesDir": "../pages"
+  },
+  "cliVersion": "0.1.327",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.327/dist/plasmic.schema.json"
+}
