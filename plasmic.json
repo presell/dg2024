@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -75,6 +75,11 @@
           "id": "6k2pBEZym2P4",
           "name": "Devyn Green - Social Share.png",
           "filePath": "../public/plasmic/blank_website/images/devynGreenSocialSharepng.png"
+        },
+        {
+          "id": "FlC-K5jz-z3U",
+          "name": "DEVYN AI ICON.png",
+          "filePath": "../public/plasmic/blank_website/images/devynAiIcoNpng.png"
         }
       ],
       "indirect": false,

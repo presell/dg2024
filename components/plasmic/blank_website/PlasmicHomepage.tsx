@@ -79,9 +79,10 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  igStack2?: Flex__<"a"> & Partial<LinkProps>;
   igStack?: Flex__<"a"> & Partial<LinkProps>;
   twitterStack?: Flex__<"a"> & Partial<LinkProps>;
-  twitterStack2?: Flex__<"a"> & Partial<LinkProps>;
+  linkedInStack?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultHomepageProps {}
@@ -220,6 +221,48 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </div>
             <PlasmicLink__
+              data-plasmic-name={"igStack2"}
+              data-plasmic-override={overrides.igStack2}
+              className={classNames(projectcss.all, projectcss.a, sty.igStack2)}
+              component={Link}
+              href={"https://www.instagram.com/devynceo/"}
+              platform={"nextjs"}
+              target={"_blank"}
+            >
+              <IconIcon
+                className={classNames(projectcss.all, sty.svg__akPox)}
+                role={"img"}
+              />
+
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__tHNd)}
+                displayHeight={"40px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"40px"}
+                loading={"eager"}
+                src={{
+                  src: "/plasmic/blank_website/images/devynAiIcoNpng.png",
+                  fullWidth: 2560,
+                  fullHeight: 2048,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___4B1Zl
+                )}
+              >
+                {"DEVYN.AI"}
+              </div>
+            </PlasmicLink__>
+            <PlasmicLink__
               data-plasmic-name={"igStack"}
               data-plasmic-override={overrides.igStack}
               className={classNames(projectcss.all, projectcss.a, sty.igStack)}
@@ -308,12 +351,12 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </PlasmicLink__>
             <PlasmicLink__
-              data-plasmic-name={"twitterStack2"}
-              data-plasmic-override={overrides.twitterStack2}
+              data-plasmic-name={"linkedInStack"}
+              data-plasmic-override={overrides.linkedInStack}
               className={classNames(
                 projectcss.all,
                 projectcss.a,
-                sty.twitterStack2
+                sty.linkedInStack
               )}
               component={Link}
               href={"https://www.linkedin.com/in/devyngreen/"}
@@ -361,19 +404,21 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "igStack", "twitterStack", "twitterStack2"],
+  root: ["root", "igStack2", "igStack", "twitterStack", "linkedInStack"],
+  igStack2: ["igStack2"],
   igStack: ["igStack"],
   twitterStack: ["twitterStack"],
-  twitterStack2: ["twitterStack2"]
+  linkedInStack: ["linkedInStack"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  igStack2: "a";
   igStack: "a";
   twitterStack: "a";
-  twitterStack2: "a";
+  linkedInStack: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -436,9 +481,10 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    igStack2: makeNodeComponent("igStack2"),
     igStack: makeNodeComponent("igStack"),
     twitterStack: makeNodeComponent("twitterStack"),
-    twitterStack2: makeNodeComponent("twitterStack2"),
+    linkedInStack: makeNodeComponent("linkedInStack"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
