@@ -100,7 +100,7 @@
   text-decoration-line: none;
   text-overflow: clip;
 }
-.igStack2 {
+.devynStack {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -137,6 +137,13 @@
 .img__tHNd > picture > img {
   object-fit: cover;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .img__tHNd {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+}
 .text___4B1Zl {
   position: relative;
   width: 100%;
@@ -157,6 +164,11 @@
   text-decoration-line: none;
   text-overflow: clip;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text___4B1Zl {
+    font-size: 18px;
+  }
 }
 .igStack {
   display: flex;
@@ -195,6 +207,13 @@
 .img___7OfEf > picture > img {
   object-fit: cover;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .img___7OfEf {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+}
 .text__xS9Q6 {
   position: relative;
   width: 100%;
@@ -215,6 +234,11 @@
   text-decoration-line: none;
   text-overflow: clip;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text__xS9Q6 {
+    font-size: 18px;
+  }
 }
 .twitterStack {
   display: flex;
@@ -253,6 +277,13 @@
 .img__jIzs2 > picture > img {
   object-fit: cover;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .img__jIzs2 {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+}
 .text__q9Cn {
   position: relative;
   width: 100%;
@@ -273,6 +304,11 @@
   text-decoration-line: none;
   text-overflow: clip;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text__q9Cn {
+    font-size: 18px;
+  }
 }
 .linkedInStack {
   display: flex;
@@ -311,6 +347,13 @@
 .img__cfBw > picture > img {
   object-fit: cover;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .img__cfBw {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+}
 .text__oOkQo {
   position: relative;
   width: 100%;
@@ -332,4 +375,9 @@
   text-decoration-line: none;
   text-overflow: clip;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text__oOkQo {
+    font-size: 18px;
+  }
 }

@@ -59,6 +59,8 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { useScreenVariants as useScreenVariantsuarjUj0RGmN } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: uarjUj0rGmN_/globalVariant
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: tvwynAfQ8HvxBn14Wy9CDp/projectcss
@@ -79,7 +81,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
-  igStack2?: Flex__<"a"> & Partial<LinkProps>;
+  devynStack?: Flex__<"a"> & Partial<LinkProps>;
   igStack?: Flex__<"a"> & Partial<LinkProps>;
   twitterStack?: Flex__<"a"> & Partial<LinkProps>;
   linkedInStack?: Flex__<"a"> & Partial<LinkProps>;
@@ -117,6 +119,10 @@ function PlasmicHomepage__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = useCurrentUser?.() || {};
+
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsuarjUj0RGmN()
+  });
 
   return (
     <React.Fragment>
@@ -221,11 +227,15 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </div>
             <PlasmicLink__
-              data-plasmic-name={"igStack2"}
-              data-plasmic-override={overrides.igStack2}
-              className={classNames(projectcss.all, projectcss.a, sty.igStack2)}
+              data-plasmic-name={"devynStack"}
+              data-plasmic-override={overrides.devynStack}
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.devynStack
+              )}
               component={Link}
-              href={"https://www.instagram.com/devynceo/"}
+              href={"https://www.devyn.ai/"}
               platform={"nextjs"}
               target={"_blank"}
             >
@@ -237,12 +247,20 @@ function PlasmicHomepage__RenderFunc(props: {
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__tHNd)}
-                displayHeight={"40px"}
+                displayHeight={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "30px"
+                    : "40px"
+                }
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"40px"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "30px"
+                    : "40px"
+                }
                 loading={"eager"}
                 src={{
                   src: "/plasmic/blank_website/images/devynAiIcoNpng.png",
@@ -279,12 +297,20 @@ function PlasmicHomepage__RenderFunc(props: {
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img___7OfEf)}
-                displayHeight={"40px"}
+                displayHeight={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "30px"
+                    : "40px"
+                }
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"40px"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "30px"
+                    : "40px"
+                }
                 loading={"eager"}
                 src={{
                   src: "/plasmic/blank_website/images/image2.svg",
@@ -325,12 +351,20 @@ function PlasmicHomepage__RenderFunc(props: {
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__jIzs2)}
-                displayHeight={"40px"}
+                displayHeight={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "30px"
+                    : "40px"
+                }
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"40px"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "30px"
+                    : "40px"
+                }
                 loading={"eager"}
                 src={{
                   src: "/plasmic/blank_website/images/image3.png",
@@ -371,12 +405,20 @@ function PlasmicHomepage__RenderFunc(props: {
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__cfBw)}
-                displayHeight={"40px"}
+                displayHeight={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "30px"
+                    : "40px"
+                }
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"40px"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "30px"
+                    : "40px"
+                }
                 loading={"eager"}
                 src={{
                   src: "/plasmic/blank_website/images/image4.png",
@@ -404,8 +446,8 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "igStack2", "igStack", "twitterStack", "linkedInStack"],
-  igStack2: ["igStack2"],
+  root: ["root", "devynStack", "igStack", "twitterStack", "linkedInStack"],
+  devynStack: ["devynStack"],
   igStack: ["igStack"],
   twitterStack: ["twitterStack"],
   linkedInStack: ["linkedInStack"]
@@ -415,7 +457,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  igStack2: "a";
+  devynStack: "a";
   igStack: "a";
   twitterStack: "a";
   linkedInStack: "a";
@@ -481,7 +523,7 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    igStack2: makeNodeComponent("igStack2"),
+    devynStack: makeNodeComponent("devynStack"),
     igStack: makeNodeComponent("igStack"),
     twitterStack: makeNodeComponent("twitterStack"),
     linkedInStack: makeNodeComponent("linkedInStack"),
