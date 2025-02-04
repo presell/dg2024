@@ -1,0 +1,9 @@
+<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
+  <path d="M26.229 11.341c.942-.367 1.413-.55 1.545-.81a.764.764 0 00-.01-.712c-.14-.255-.615-.425-1.567-.766L1.92.356C1.141.078.752-.062.498.026a.764.764 0 00-.472.472c-.088.255.052.644.332 1.423l8.73 24.265c.342.95.513 1.427.769 1.565.22.12.487.124.712.01.259-.133.442-.604.807-1.547 1.109-2.855 2.07-8.468 4.199-10.648 2.087-2.138 7.854-3.133 10.654-4.225z" fill="url(#HVBYyZPCZ1usa)"/>
+  <defs>
+    <linearGradient id="HVBYyZPCZ1usa" x1="13.929" y1="0" x2="13.929" y2="27.844" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>

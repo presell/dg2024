@@ -74,12 +74,22 @@
         {
           "id": "6k2pBEZym2P4",
           "name": "Devyn Green - Social Share.png",
-          "filePath": "../public/plasmic/blank_website/images/devynGreenSocialSharepng.png"
+          "filePath": "../public/plasmic/blank_website/images/devynGreenSocialSharePng.png"
         },
         {
           "id": "FlC-K5jz-z3U",
           "name": "DEVYN AI ICON.png",
-          "filePath": "../public/plasmic/blank_website/images/devynAiIcoNpng.png"
+          "filePath": "../public/plasmic/blank_website/images/devynAiIconPng.png"
+        },
+        {
+          "id": "57tbnkUxWw7W",
+          "name": "DG Profile Image.png",
+          "filePath": "../public/plasmic/devyn_green_com_production/images/dgProfileImagePng.png"
+        },
+        {
+          "id": "Wpvz56-nCulp",
+          "name": "DG Cursor.svg",
+          "filePath": "../public/plasmic/devyn_green_com_production/images/dgCursorSvg.svg"
         }
       ],
       "indirect": false,
@@ -116,6 +126,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.327",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.327/dist/plasmic.schema.json"
+  "cliVersion": "0.1.335",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.335/dist/plasmic.schema.json"
 }

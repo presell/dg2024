@@ -81,7 +81,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
-  devynStack?: Flex__<"a"> & Partial<LinkProps>;
+  adBuyStack?: Flex__<"a"> & Partial<LinkProps>;
   igStack?: Flex__<"a"> & Partial<LinkProps>;
   twitterStack?: Flex__<"a"> & Partial<LinkProps>;
   linkedInStack?: Flex__<"a"> & Partial<LinkProps>;
@@ -106,7 +106,16 @@ function PlasmicHomepage__RenderFunc(props: {
 }) {
   const { variants, overrides, forNode } = props;
 
-  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+        Object.fromEntries(
+          Object.entries(props.args).filter(([_, v]) => v !== undefined)
+        )
+      ),
+    [props.args]
+  );
 
   const $props = {
     ...args,
@@ -117,8 +126,6 @@ function PlasmicHomepage__RenderFunc(props: {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-
-  const currentUser = useCurrentUser?.() || {};
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsuarjUj0RGmN()
@@ -200,9 +207,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayWidth={"100px"}
                 loading={"eager"}
                 src={{
-                  src: "/plasmic/blank_website/images/devynGreenHeroImage.png",
-                  fullWidth: 3072,
-                  fullHeight: 3072,
+                  src: "/plasmic/devyn_green_com_production/images/dgProfileImagePng.png",
+                  fullWidth: 2674,
+                  fullHeight: 2674,
                   aspectRatio: undefined
                 }}
               />
@@ -227,15 +234,15 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </div>
             <PlasmicLink__
-              data-plasmic-name={"devynStack"}
-              data-plasmic-override={overrides.devynStack}
+              data-plasmic-name={"adBuyStack"}
+              data-plasmic-override={overrides.adBuyStack}
               className={classNames(
                 projectcss.all,
                 projectcss.a,
-                sty.devynStack
+                sty.adBuyStack
               )}
               component={Link}
-              href={"https://www.devyn.ai/"}
+              href={"https://www.adbuy.ai/"}
               platform={"nextjs"}
               target={"_blank"}
             >
@@ -263,10 +270,10 @@ function PlasmicHomepage__RenderFunc(props: {
                 }
                 loading={"eager"}
                 src={{
-                  src: "/plasmic/blank_website/images/devynAiIcoNpng.png",
-                  fullWidth: 2560,
-                  fullHeight: 2048,
-                  aspectRatio: undefined
+                  src: "/plasmic/devyn_green_com_production/images/dgCursorSvg.svg",
+                  fullWidth: 28,
+                  fullHeight: 28,
+                  aspectRatio: 1
                 }}
               />
 
@@ -277,7 +284,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.text___4B1Zl
                 )}
               >
-                {"DEVYN.AI"}
+                {"AdBuy.ai"}
               </div>
             </PlasmicLink__>
             <PlasmicLink__
@@ -285,7 +292,7 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-override={overrides.igStack}
               className={classNames(projectcss.all, projectcss.a, sty.igStack)}
               component={Link}
-              href={"https://www.instagram.com/devynceo/"}
+              href={"https://www.instagram.com/adbuyceo/"}
               platform={"nextjs"}
               target={"_blank"}
             >
@@ -339,7 +346,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 sty.twitterStack
               )}
               component={Link}
-              href={"https://twitter.com/devynceo"}
+              href={"https://twitter.com/adbuyceo"}
               platform={"nextjs"}
               target={"_blank"}
             >
@@ -446,8 +453,8 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "devynStack", "igStack", "twitterStack", "linkedInStack"],
-  devynStack: ["devynStack"],
+  root: ["root", "adBuyStack", "igStack", "twitterStack", "linkedInStack"],
+  adBuyStack: ["adBuyStack"],
   igStack: ["igStack"],
   twitterStack: ["twitterStack"],
   linkedInStack: ["linkedInStack"]
@@ -457,7 +464,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  devynStack: "a";
+  adBuyStack: "a";
   igStack: "a";
   twitterStack: "a";
   linkedInStack: "a";
@@ -523,7 +530,7 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    devynStack: makeNodeComponent("devynStack"),
+    adBuyStack: makeNodeComponent("adBuyStack"),
     igStack: makeNodeComponent("igStack"),
     twitterStack: makeNodeComponent("twitterStack"),
     linkedInStack: makeNodeComponent("linkedInStack"),
